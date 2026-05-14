@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roast Generator</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #111, #1f1f2e);
+      color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .card {
+      background: #222;
+      padding: 30px;
+      border-radius: 16px;
+      max-width: 500px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    #roast {
+      margin: 20px 0;
+      font-size: 1.2rem;
+      color: #ffcccb;
+      min-height: 60px;
+    }
+
+    button {
+      padding: 12px 18px;
+      border: none;
+      border-radius: 10px;
+      background: #ff4d4d;
+      color: white;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background: #e63b3b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>🔥 Roast Generator</h1>
+    <p>Press the button if you dare.</p>
+
+    <div id="roast">Your roast will appear here...</div>
+
+    <button onclick="generateRoast()">Generate Roast</button>
+  </div>
+
+  <script>
+    const roasts = [
+      "You have something on your face… oh wait, that’s just your personality.",
+      "You bring everyone so much joy… when you leave the room.",
+      "You’re like a cloud. When you disappear, it’s a beautiful day.",
+      "You have the perfect face for radio.",
+      "If brains were dynamite, you wouldn’t have enough to blow your hat off.",
+      "You’re not stupid; you just have bad luck thinking.",
+      "You’re like a software update—nobody wants you, but you still show up.",
+      "Your WiFi signal has more intelligence than your argument.",
+      "You’re proof that evolution can pause for dramatic effect.",
+      "You bring people together… so they can talk about how confusing you are."
+    ];
+
+    function generateRoast() {
+      const randomIndex = Math.floor(Math.random() * roasts.length);
+      document.getElementById("roast").textContent = roasts[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
